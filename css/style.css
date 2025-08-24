@@ -87,32 +87,76 @@ header p {
 }
 
 .menuPage {
-    width: 27rem;
     margin: 0 auto 1rem auto;
 }
 
+.menuImg {
+    box-shadow: 10px 5px 10px rgb(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menuImg:hover {
+    transform: scale(1.03);
+}
+
+.menuImg,
+.menuPage {
+    width: 27rem;
+}
+
 @media (min-width: 569px) {
+
+    .menuImg,
     .menuPage {
         width: 30rem;
     }
 }
 
 @media (min-width: 768px) {
+
+    .menuImg,
     .menuPage {
         width: 40rem;
     }
 }
 
 @media (min-width: 996px) {
+
+    .menuImg,
     .menuPage {
         width: 60rem;
     }
 }
 
-.menuPage img {
-    box-shadow: 10px 5px 10px rgb(0, 0, 0, 0.3);
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
+.overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 5px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
 
 
 
