@@ -69,8 +69,14 @@ header {
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #e31e2f;
+}
+
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
 }
 
 header p {
@@ -102,14 +108,15 @@ header p {
 
 .menuImg,
 .menuPage {
-    width: 27rem;
+    width: 100%;           /* ✅ always fit screen */
+    max-width: 27rem;      /* ✅ keep max size for larger screens */
 }
 
 @media (min-width: 569px) {
 
     .menuImg,
     .menuPage {
-        width: 30rem;
+        max-width: 30rem;
     }
 }
 
@@ -117,7 +124,7 @@ header p {
 
     .menuImg,
     .menuPage {
-        width: 40rem;
+        max-width: 40rem;
     }
 }
 
@@ -125,7 +132,7 @@ header p {
 
     .menuImg,
     .menuPage {
-        width: 60rem;
+        max-width: 60rem;
     }
 }
 
@@ -204,6 +211,13 @@ footer .contact {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     border: none;
     cursor: pointer;
+}
+
+@media (max-width: 400px) {
+    .call-btn {
+        padding: 10px;
+        font-size: 1.2rem;
+    }
 }
 
 .call-options {
